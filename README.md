@@ -6,4 +6,4 @@ All *.pdf, *.jpg and *.png in `/path/to/input` will be converted and saved to `/
 
 Usage
 -------------
-`docker run --rm  -v /path/to/output:/output -v /path/to/input:/input toprock/audiveris`
+`docker run --rm  -v /path/to/output:/output -v /path/to/input:/input forked/audiveris`

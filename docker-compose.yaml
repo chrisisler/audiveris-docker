@@ -2,9 +2,11 @@ version: "3.7"
 
 services:
     audiveris:
-        build: .
-        image: toprock/audiveris
+        build: 
+          context: .
+          dockerfile: Dockerfile
+        image: forked/audiveris
         container_name: audiveris-converter
         volumes:
-            -  "./input:/input/"
-            -  "./output:/output/"
+            -  "~/audiveris/input:/input/"
+            -  "~/audiveris/output:/output/"

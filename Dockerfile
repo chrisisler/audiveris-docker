@@ -1,6 +1,9 @@
-FROM debian:stretch-slim
+FROM eclipse-temurin:21
+# RUN mkdir /opt/app
+# COPY japp.jar /opt/app
+# CMD ["java", "-jar", "/opt/app/japp.jar"]
 
-RUN apt-get update && apt-get install -y  \
+RUN apk update && apk install -y  \
         curl \
         wget \
         git \
@@ -9,11 +12,7 @@ RUN apt-get update && apt-get install -y  \
         tesseract-ocr-deu \
         tesseract-ocr-fra
 
-RUN wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb \
-        && apt install -y ./jdk-17_linux-x64_bin.deb \
-        && rm ./jdk-17_linux-x64_bin.deb
-
-ENV JAVA_HOME=/usr/lib/jvm/jdk-17/ 
+# ENV JAVA_HOME=/usr/lib/jvm/jdk-17/ 
 ENV PATH=$PATH:$JAVA_HOME/bin 
 
 RUN  git clone --branch development https://github.com/Audiveris/audiveris.git && \
