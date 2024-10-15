@@ -6,5 +6,5 @@ services:
         image: forked/audiveris
         container_name: audiveris-converter
         volumes:
-            -  "~/audiveris/input:/input/"
-            -  "~/audiveris/output:/output/"
+            -  "~/dir/audiveris-docker/input:/input/"
+            # -  "~/dir/audiveris-docker/output:/output/"
