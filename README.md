@@ -1,4 +1,4 @@
-# audiveris-docker-images
+# img2mxl
 
 This container will convert all jpg, png and pdf to mxl (MusicXML) so you can further edit it with tools like MuseScore.
 
